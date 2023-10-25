@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Individual Grimm</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+</head>
+<body>
+    <h1 id="title">BASE DE DATOS GRIMM WESEN </h1>
+    <div id="content">
+        <div id="wesen-list"><script src="main.js"></script></div>
+
+        <div>
+            <form id="wesen-form">
+                <input type="hidden" name="wesen-id" id="wesen-id">
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="name" required>
+                <br><br>
+                <label for="image">Imagen (URL):</label>
+                <input type="text" name="image" id="image" required>
+                <br><br>
+                <label for="type">Tipo:</label>
+                <select name="type" id="type" required>
+                    <option value="">Seleccionar Tipo</option>
+                    <option value="lobo">Lobo</option>
+                    <option value="cánido">Cánido</option>
+                    <option value="felino">Felino</option>
+                    <option value="reptil">Reptil</option>
+                    <option value="insecto">Insecto</option>
+                    <option value="anfibio">Anfibio</option>
+                    <option value="ave">Ave</option>
+                    <option value="monstruo">Monstruo</option>
+                    
+                </select>
+                <br><br>
+                <label for="peligrosidad">Peligrosidad:</label>
+                <select name="peligrosidad" id="peligrosidad" required>
+                    <option value="">Seleccionar Peligrosidad</option>
+                    <option value="pacífico">Pacífico</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="peligroso">Peligroso</option>
+                    <option value="violento">Violento</option>
+                </select>
+                <br><br>
+                <label for="aspecto">Descripción del Aspecto:</label>
+                <textarea name="aspecto" id="aspecto" rows="4" cols="40" required></textarea>
+                <br><br>
+                <label for="notas">Notas del Grimm:</label>
+                <textarea name="notas" id="notas" rows="4" cols="40"></textarea>
+                <br><br>
+                <button type="button" id="save-button" onclick="guardarWesenInfoEditada()">Guardar</button>
+                <button type="button" id="delete-button" onclick="borrarWesenInfo()">Borrar</button>
+                <button type="button" id="add_button" onclick="anadirWesen()">Añadir</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

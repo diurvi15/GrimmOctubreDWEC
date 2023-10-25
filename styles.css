@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+#content {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#wesen-list {
+    flex: 0;
+}
+
+.wesen-item {
+    padding: 15px;
+    background-color: #f9a825;
+    border: 2px solid #e88b12;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 24px; /* Aumenta el tamaño de la fuente */
+    color: #fff;
+    word-wrap: break-word;
+    white-space: normal;
+    width: 150px; /* Ancho de 150px para cada elemento .wesen-item */
+    height: 250px; /* Alto de 250px para cada elemento .wesen-item */
+}
+
+.wesen-item img {
+    max-width: 100%;
+    max-height: 100%; /* Añade esto para mantener la relación de aspecto */
+    width: 100%; /* Ancho máximo del 100% para ajustarse al contenedor */
+}
+
+form {
+    flex: 1;
+    padding: 20px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #e88b12;
+    font-size: 20px; 
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: 2px solid #f9a825;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+form button {
+    background-color: #e88b12;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+form button:hover {
+    background-color: #ff9933;
+}
