@@ -134,6 +134,8 @@ function cargarWesenInfo(wesenId) {
 
 // Función para borrar un Wesen
 function borrarWesenInfo() {
+    const formulario = document.getElementById("wesen-form");
+    if(formulario.checkValidity()){
     const wesenId = parseInt(document.getElementById("wesen-id").value);
     const wesenIndex = wesensIniciales.findIndex(w => w.id === wesenId);
 
@@ -146,8 +148,11 @@ function borrarWesenInfo() {
         
         inicializar();
     } else {
-        alert("El Wesen no existe o ya ha sido eliminado.");
+        alert("El Wesen ya ha sido eliminado.");
     }
+}else{
+    alert("El Wesen no ha sido seleccionado, escoja alguno.");
+}
 }
 
 // Función para agregar un nuevo Wesen
@@ -191,9 +196,10 @@ function anadirWesen() {
 
 // Función para guardar los datos editados
 function guardarWesenInfoEditada() {
+    const formulario = document.getElementById("wesen-form");
     const wesenId = parseInt(document.getElementById("wesen-id").value);
     const wesenIndex = wesensIniciales.findIndex(w => w.id === wesenId);
-
+    if(formulario.checkValidity()){
     if (wesenIndex !== -1) {
         wesensIniciales[wesenIndex].name = document.getElementById("name").value;
         wesensIniciales[wesenIndex].image = document.getElementById("image").value;
@@ -205,7 +211,11 @@ function guardarWesenInfoEditada() {
 
     // Limpiar el formulario después de guardar
     document.getElementById("wesen-form").reset();
+    alert("Datos guardados con éxito. ");
     inicializar();
+}else{
+    alert("Debe seleccionar un wesen para guardar los nuevos cambios. ");
+}
 }
 
 
